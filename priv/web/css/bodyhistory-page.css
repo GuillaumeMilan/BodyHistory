@@ -6,6 +6,7 @@
 }
 
 .bodyhistory-tool {
+  padding: 5px;
   margin-left: 25px;
   cursor: pointer;
   height: 50px;
