@@ -1,0 +1,39 @@
+.bodyhistory-tools {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.bodyhistory-tool {
+  margin-left: 25px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-color: #7be495;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.bodyhistory-tool.selected {
+  background-color: #329d9c;
+}
+
+.bodyhistory-graph {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bodyhistory-graph svg {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.bodyhistory-svg-path {
+  cursor: crosshair;
+}
+
+.bodyhistory-svg-circle {
+  cursor: pointer;
+}

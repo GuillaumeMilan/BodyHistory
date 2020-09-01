@@ -1,0 +1,5 @@
+# Binary beam files
+_build
+
+# Deps files
+deps
