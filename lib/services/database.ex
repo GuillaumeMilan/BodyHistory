@@ -19,7 +19,7 @@ defmodule ETSDatabase do
 
   @doc false
   def init(opts) do
-    IO.inspect(opts.ets_name, label: "CREATING ETS")
+    #IO.inspect(opts.ets_name, label: "[#{__MODULE__}] Creating database")
     {:ok, opts, {:continue, :load_table}}
   end
 
@@ -43,6 +43,7 @@ defmodule ETSDatabase do
   def handle_call({:put, id, value}, _, %{ets_name: ets_name} = state) do
     {:reply, put(ets_name, id, value), state}
   end
+  #TODO terminate backup table
 
 
 

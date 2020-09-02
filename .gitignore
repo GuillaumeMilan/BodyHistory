@@ -3,3 +3,6 @@ _build
 
 # Deps files
 deps
+
+# Database directory
+data

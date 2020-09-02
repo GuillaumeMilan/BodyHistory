@@ -5,12 +5,18 @@ defmodule BodyHistory.Application do
 
   use Application
 
+  def databases do
+    [
+      {ETSDatabase, BodyHistory.Points.database()}
+    ]
+  end
+
   def start(_type, _args) do
     {ip,port} = {"0.0.0.0", 9100}
     children = [
       #Plug.Adapters.Cowboy.child_spec(:http,HTTP.Router,[], port: port, ip: elem(:inet.parse_address('#{ip}'),1), ref: {ip,port})
       {Plug.Cowboy, scheme: :http, plug: HTTP.Router, port: port}
-    ]
+    ] ++ databases()
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: BodyHistory.Supervisor]
